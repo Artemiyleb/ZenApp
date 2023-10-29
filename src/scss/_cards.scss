@@ -1,0 +1,61 @@
+.cards {
+	@include adaptiveValue("padding-top", 47, 10);
+	@include adaptiveValue("padding-bottom", 73, 10);
+}
+
+.cards-items {
+	display: flex;
+	gap: 140px;
+	@media (max-width: $breakpoint992){
+		gap: 30px;
+		flex-direction: column;
+	}
+}
+
+.cards-text {
+	display: flex;
+}
+
+.cards-text__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 56px;
+	@media (max-width: $breakpoint992){
+		padding-bottom: 10px;
+	}
+	.text__header {
+		h2 {
+			position: relative;
+		&:after {
+			position: absolute;
+			content: "®";
+			font-size: 22px;
+			margin-left: 10px;
+			margin-top: -7px;
+	}
+}
+	}
+}
+
+.cards-text__icons {
+	margin-top: 28px;
+	display: flex;
+	gap: 20px;
+}
+
+.cards-img {
+	min-width: 585px;
+	
+	@media (max-width: $breakpoint992){
+		min-width: auto;
+		max-width: 585px;
+	}
+}
+
+.cards-img__fixedratio {
+	padding-top: 100.68%;
+	background-image: url(../img/cards.jpg);
+  background-size: cover;
+	background-position: center;
+}

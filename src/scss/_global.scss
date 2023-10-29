@@ -1,0 +1,80 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint1450) {
+        max-width: 1200px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body & Locked
+body {
+    font-family: $fontMain;
+    &.locked {
+        overflow: hidden;
+    }
+    // Dark mode styles
+    &.dark {
+        background: #242424;
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+a {
+	color: $mainColor;
+  transition: 0.5s color;
+	&:hover {
+		color: #AAA;
+	}
+}
+
+.btn {
+	font-size: 18px;
+	color: $mainColor;
+	padding: 12px 32px 11px 32px;
+	border: solid 1px #000;
+	border-radius: 48px;
+	transition: 0.5s all;
+
+	&:hover {
+		border-color: #AAA;
+	}
+	 
+}
+
+.text__header {
+	@include adaptiveValue("font-size", 36, 18);
+	line-height: 1.2;
+	padding-bottom: 22px;
+}
+
+.text__description {
+	@include adaptiveValue("font-size", 18, 14);
+	line-height: 1.44;
+}

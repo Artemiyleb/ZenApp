@@ -1,0 +1,43 @@
+.care {
+	@include adaptiveValue("padding-top", 32, 10);
+	@include adaptiveValue("padding-bottom", 41, 10);
+}
+
+.care-items {
+	display: flex;
+	gap: 135px;
+	@media (max-width: $breakpoint992){
+		gap: 30px;
+		flex-direction: column;
+	}
+}
+
+.care-img {
+	min-width: 585px;
+	
+	@media (max-width: $breakpoint992){
+		min-width: auto;
+		max-width: 585px;
+	}
+}
+
+.care-img__fixedratio {
+  padding-top: 100.34%;
+	background-image: url(../img/care.jpg);
+  background-size: cover;
+	background-position: center;
+}
+
+.care-text {
+display: flex;
+}
+
+.care-text__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 22px;
+	@media (max-width: $breakpoint992){
+		padding-bottom: 10px;
+	}
+}
